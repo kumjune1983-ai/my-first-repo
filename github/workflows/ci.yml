@@ -1,0 +1,7 @@
+myproject/
+ ┣ .github/
+ ┃ ┗ workflows/
+ ┃    ┗ ci.yml   👈 (your workflow file goes here)
+ ┣ app.py
+ ┣ requirements.txt
+ ┣ ...
