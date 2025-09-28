@@ -1,0 +1,31 @@
+# set these variables first:
+GH_USER="YOUR-GITHUB-USERNAME"
+REPO="REPO-NAME"
+LOCAL_DIR="$HOME/my-first-project"
+
+mkdir -p "$LOCAL_DIR"
+cd "$LOCAL_DIR"
+
+# create files
+cat > README.md <<'EOF'
+# My First Project
+Tiny demo for pushing to GitHub from VS Code/Windows.
+EOF
+
+cat > .gitignore <<'EOF'
+__pycache__/
+.vscode/
+*.pyc
+EOF
+
+cat > hello.py <<'EOF'
+print('Hello from my-first-project!')
+EOF
+
+# git init + commit + push
+git init
+git add .
+git commit -m "Initial commit"
+git branch -M main
+git remote add origin https://github.com/$GH_USER/$REPO.git
+git push -u origin main
